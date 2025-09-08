@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md py-4">
+        <!-- Centered Image with Increased Size -->
+        <div class="flex justify-center mb-4">
+            <img src="assets/uksbelogo.png" alt="Logo" class="h-20">
+        </div>
+
+        <!-- Navigation and Search -->
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Navigation Options -->
+                <nav class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">About us</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Test results
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Marketing</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Government orders
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Marketing</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">The course</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Registration</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-500 flex items-center">
+                            Administration
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Marketing</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-700 hover:text-blue-500">Collection form</a>
+                </nav>
+
+                <!-- Search Bar with Icon -->
+                <div class="w-full md:w-1/3 relative">
+                    <input type="text" placeholder="Search..." class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10">
+                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Image Slider -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="relative w-full max-w-6xl mx-auto">
+            <div class="overflow-hidden rounded-lg">
+                <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                    <img src="assets/slide1.jpg" alt="Slide 1" class="w-full h-96 object-contain flex-none">
+                    <img src="assets/slide2.jpg" alt="Slide 2" class="w-full h-96 object-contain flex-none">
+                    <img src="assets/slide3.jpg" alt="Slide 3" class="w-full h-96 object-contain flex-none">
+                    <img src="assets/slide4.jpg" alt="Slide 3" class="w-full h-96 object-contain flex-none">
+                    <img src="assets/slide5.jpg" alt="Slide 3" class="w-full h-96 object-contain flex-none">
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- New Section with Three Columns -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- First Column: Header, Image, Paragraph -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">About Us</h2>
+                <img src="assets/aboutus.png" alt="About Image" class="w-full h-48 object-cover rounded-md mb-4">
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <!-- Second Column: Header, Image, Link List -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Test Results</h2>
+                <img src="assets/result.jpg" alt="Links Image" class="w-full h-48 object-cover rounded-md mb-4">
+                <ul class="text-gray-600 space-y-2">
+                    <li><a href="#" class="hover:text-blue-500">Result 2025</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Result 2024</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Result 2023</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Result 2022</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Result 2021</a></li>
+                </ul>
+            </div>
+
+            <!-- Third Column: News and Events (Scrollable Upward) -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">News & Events</h2>
+                <div class="relative h-64 overflow-hidden">
+                    <div id="newsTicker" class="absolute w-full animate-ticker">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">East Central Exam Result Year 2025</h3>
+                        </div>
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">North Central Exam Result Year 2025</h3>
+                        </div>
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">Uttarakhand Sanskrit Education Council</h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section with Background Image -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-md relative" style="background-image: url('https://via.placeholder.com/1200x600?text=About+Us+Background'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+            <div class="bg-white bg-opacity-80 p-4 rounded-lg">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Uttarakhand Sanskrit Education Council</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    We are a passionate team dedicated to delivering innovative solutions that empower our clients to achieve their goals. With years of experience in the industry, we specialize in providing top-notch services tailored to your needs. Our mission is to create value through creativity, technology, and collaboration, ensuring that every project we undertake exceeds expectations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section with Image on Top -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/sanskrit-calligraphy-1.png" alt="Details Image" class="w-full h-64 object-cover rounded-md mb-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Uttarakhand Sanskrit Education Council</h2>
+            <p class="text-gray-600 leading-relaxed">
+                Dive deeper into what we offer. Our services encompass a wide range of solutions, from cutting-edge technology development to strategic consulting. We believe in transparency, quality, and customer satisfaction. Explore our portfolio, connect with our team, or reach out to learn how we can help you succeed in your endeavors.
+            </p>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- First Column: About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Our Philosophy</h3>
+                    <p class="text-gray-300">
+                        "May all be happy; may all be in good health;
+may all see prosperity; let none share in sorrow.
+
+Meaning:- "May all be happy, all be free from disease, good deeds be done with all and no one suffer"</p>
+                </div>
+
+                <!-- Second Column: Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300">Home</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Services</a></li>
+                        <li><a href="#" class="hover:text-blue-300">About</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Third Column: Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-300">Email: uksspd[@]gmail[dot]com</p>
+                    <p class="text-gray-300">Phone: 9410 180 880</p>
+                    <p class="text-gray-300">
+Adress: Uttarakhand Sanskrit Shiksha Parishad,
+2nd Floor, Directorate of Secondary Education, Dehradun PIN-2</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Uttarakhand Sanskrit Education Council. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Image Slider Script
+        const slider = document.getElementById('slider');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let currentIndex = 0;
+        const slides = slider.children;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+            updateSlider();
+        });
+
+        next.addEventListener('click', () => {
+            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        }, 5000);
+
+        // News Ticker Animation
+        const ticker = document.getElementById('newsTicker');
+        let tickerPosition = 0;
+        const tickerHeight = ticker.offsetHeight;
+
+        function animateTicker() {
+            tickerPosition -= 1; // Move up by 1px
+            if (tickerPosition <= -tickerHeight) {
+                tickerPosition = 0; // Reset to start
+            }
+            ticker.style.transform = `translateY(${tickerPosition}px)`;
+            requestAnimationFrame(animateTicker);
+        }
+
+        // Start ticker animation
+        requestAnimationFrame(animateTicker);
+    </script>
+
+    <style>
+        /* Custom CSS for upward scrolling animation */
+        @keyframes ticker {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        .animate-ticker {
+            animation: ticker linear infinite;
+            animation-duration: 20s; /* Adjust speed as needed */
+        }
+
+        .animate-ticker:hover {
+            animation-play-state: paused; /* Pause on hover */
+        }
+    </style>
+</body>
+</html>
